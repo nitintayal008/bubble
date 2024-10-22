@@ -1,0 +1,60 @@
+.myBubbleUI {
+  width: 100%;
+  height: 550px;
+  background-color: #000000;
+  position: relative;
+}
+
+.bubble-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: transform 0.2s ease;
+  z-index: 1;
+  border: 2px solid goldenrod;
+  box-sizing: border-box;
+}
+
+.childComponent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.childComponent .media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 10px auto;
+  perspective: 1000px;
+  transition: transform 0.5s ease; /* Smooth tilting */
+}
+
+.grid-item {
+  width: 50px;
+  height: 50px;
+  background-color: #00f;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2em;
+}
+
