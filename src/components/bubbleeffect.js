@@ -4,7 +4,8 @@ import "react-bubble-ui/dist/index.css";
 import { data } from "./data";
 import "./styles.css";
 import ChildComponent from "./childComponent";
-import GyroscopeGrid from "./gyroscopeGrid";
+import GyroscopeGridTop from "./gyroscopeGridTop";
+import GyroscopeGridBottom from "./gyroscopeGridBottom";
 
 export default function BubbleEffect() {
   const [centerBubble, setCenterBubble] = useState(null);
@@ -86,12 +87,12 @@ export default function BubbleEffect() {
   });
 
   return (
-    <>
-      <GyroscopeGrid /> {/* Grid on top */}
+    <div className ="mainDiv">
+      <GyroscopeGridTop /> 
       <BubbleUI key={1} options={options} className="myBubbleUI">
         {children}
       </BubbleUI>
-      <GyroscopeGrid /> {/* Grid on bottom */}
-    </>
+      <GyroscopeGridBottom/>
+    </div>
   );
 }

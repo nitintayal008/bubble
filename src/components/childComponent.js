@@ -10,7 +10,7 @@ const ChildComponent = forwardRef(({ data, setClick, isCenter }, ref) => {
           loop
           muted
           className="media"
-          playsInline // Ensure video plays inline without full-screen behavior
+          playsInline
         />
       ) : (
         <img src={data.props.src} width={data.props.width} alt="Profile" className="media" />

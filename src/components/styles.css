@@ -1,6 +1,12 @@
+.mainDiv {
+  position: relative;
+  background-color: #000000;
+  overflow: hidden;
+}
+
 .myBubbleUI {
-  width: 100%;
-  height: 550px;
+  width: 100vw;
+  height: 100vh;
   background-color: #000000;
   position: relative;
 }
@@ -37,24 +43,36 @@
   border-radius: 50%;
 }
 
-.grid {
+.grid-top {
+  width: -webkit-fill-available;
+  height: 20vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: hidden;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin: 10px auto;
-  perspective: 1000px;
-  transition: transform 0.5s ease; /* Smooth tilting */
-}
-
-.grid-item {
-  width: 50px;
-  height: 50px;
-  background-color: #00f;
-  margin: 5px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 1.2em;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 
+.grid-bottom {
+  position: absolute;
+  width: -webkit-fill-available;
+  top: 480px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.grid img {
+  max-width: 200%;
+  max-height: 100%;
+  object-fit: contain;
+}
