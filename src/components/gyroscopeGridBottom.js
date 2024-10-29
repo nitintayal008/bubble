@@ -43,7 +43,7 @@ const GyroscopeGridBottom = () => {
     <div
       className="grid-bottom"
       style={{
-        transform: `rotateZ(${alpha}deg) rotateX(${gamma}deg) rotateY(${beta-90}deg)`,
+        transform: `rotateZ(${gamma}deg)`,
         transition: "transform 0.2s ease-out",
       }}
     >

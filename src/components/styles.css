@@ -1,12 +1,17 @@
 .mainDiv {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #000000;
   overflow: hidden;
+  height: 100vh;
+  position: relative;
 }
 
 .myBubbleUI {
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   background-color: #000000;
   position: relative;
 }
@@ -44,25 +49,23 @@
 }
 
 .grid-top {
-  width: -webkit-fill-available;
-  height: 20vh;
   position: absolute;
-  top: 0;
-  left: 0;
+  height: 27vh;
+  width: 100%;
+  top: -30px;
   z-index: 1;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-size: 100% auto;
-  background-position: center center;
-  background-repeat: no-repeat;
   pointer-events: none;
 }
 
 .grid-bottom {
   position: absolute;
-  width: -webkit-fill-available;
-  top: 480px;
+  height: 20vh;
+  width: 100%;
+  bottom: 0px;
   z-index: 1;
   overflow: hidden;
   display: flex;
@@ -76,3 +79,17 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+/* @media (min-height: 768px) {
+  .grid-top {
+    height: 85vh;
+    top: -500px;
+  }
+} */
+
+/* @media (min-height: 980px) {
+  .grid-top {
+    height: 76vh;
+    top: -500px;
+  }
+} */

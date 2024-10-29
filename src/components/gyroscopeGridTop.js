@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
-import GridTop from "../img/GridTop2.svg";
+import GridTop from "../img/GridTop.svg";
 
 const GyroscopeGridTop = () => {
   const [tilt, setTilt] = useState({ alpha: 0, beta: 90, gamma: 0 });
@@ -43,7 +43,7 @@ const GyroscopeGridTop = () => {
     <div
       className="grid-top"
       style={{
-        transform: `rotateZ(${alpha}deg) rotateX(${gamma}deg) rotateY(${beta-90}deg)`,
+        transform: `rotateZ(${gamma}deg)`,
         transition: "transform 0.2s ease-out", // Smooth transition for tilt effect
       }}
     >
